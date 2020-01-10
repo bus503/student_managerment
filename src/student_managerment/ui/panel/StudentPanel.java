@@ -1,4 +1,4 @@
-package student_managerment.ui;
+package student_managerment.ui.panel;
 
 import javax.swing.JPanel;
 import javax.swing.border.TitledBorder;
@@ -25,8 +25,6 @@ public class StudentPanel extends JPanel {
 	private JTextField tfMath;
 	private JLabel lblEng;
 	private JTextField tfEng;
-	private JButton btnset;
-	private JButton btnNewButton_1;
 
 	public StudentPanel() {
 
@@ -79,12 +77,6 @@ public class StudentPanel extends JPanel {
 		tfEng.setHorizontalAlignment(SwingConstants.RIGHT);
 		add(tfEng);
 		tfEng.setColumns(10);
-		
-		btnset = new JButton("수정");
-		add(btnset);
-		
-		btnNewButton_1 = new JButton("New button");
-		add(btnNewButton_1);
 	}
 		
 	
@@ -100,7 +92,7 @@ public class StudentPanel extends JPanel {
 	
 	public void setStudent(Student std) {
 		tfStdNo.setText(std.getStdNo()+"");
-		tfStdName.setText(std.getStdName());
+		tfStdName.setText(std.getStdName()+"");
 		tfKor.setText(std.getKor()+"");
 		tfMath.setText(std.getMath()+"");
 		tfEng.setText(std.getEng()+"");

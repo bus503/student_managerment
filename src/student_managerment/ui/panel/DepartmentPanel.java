@@ -1,4 +1,4 @@
-package student_managerment.ui;
+package student_managerment.ui.panel;
 
 import javax.swing.JPanel;
 import javax.swing.border.TitledBorder;
@@ -60,21 +60,21 @@ public class DepartmentPanel extends JPanel {
 	
 
 	public Department getDepartment() {
-		String a= tfDeptNo.getText().trim();
-		int b= Integer.parseInt(lblDeptName.getText().trim());
-		int c= Integer.parseInt(lblFloor.getText().trim());
-		Department department = new Department(a,b,c);
+		String deptName= tfDeptName.getText().trim();
+		int deptNo= Integer.parseInt(tfDeptNo.getText().trim());
+		int floor= Integer.parseInt(tfFloor.getText().trim());
+		Department department = new Department(deptName,deptNo,floor);
 		return department;
 	}
-	private void clearTf() {
+	public void clearTf() {
 		tfDeptNo.setText("");
-		lblDeptName.setText("");
-		lblFloor.setText("");
+		tfDeptName.setText("");
+		tfFloor.setText("");
 	}
 	
-	private void setStudent(Student std) {
-		tfDeptNo.setText(std.getStdNo()+"");
-		lblDeptName.setText(new String(std.getStdName()+""));
-		lblFloor.setText(std.getKor()+"");
+	private void setDepartment(Department dept) {
+		tfDeptNo.setText(dept.getDeptNo()+"");
+		tfDeptName.setText((dept.getDeptName()+""));
+		tfFloor.setText(dept.getFloor()+"");
 	}
 }
