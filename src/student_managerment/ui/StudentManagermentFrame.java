@@ -14,6 +14,7 @@ import javax.swing.border.EmptyBorder;
 import student_managerment.dto.Student;
 import student_managerment.ui.panel.StudentPanel;
 
+@SuppressWarnings("serial")
 public class StudentManagermentFrame extends JFrame implements ActionListener {
 
 	private JPanel contentPane;
@@ -76,7 +77,7 @@ public class StudentManagermentFrame extends JFrame implements ActionListener {
 		}
 	}
 	protected void btnAddActionPerformed(ActionEvent e) {
-		Student newStudent = pCenter.getStudent();
+		Student newStudent = pCenter.getItem();
 		JOptionPane.showMessageDialog(null, newStudent);
 	}
 	protected void btnCancelActionPerformed(ActionEvent e) {

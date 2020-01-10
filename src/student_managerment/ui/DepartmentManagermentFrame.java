@@ -2,19 +2,19 @@ package student_managerment.ui;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
-import javax.swing.JButton;
 
 import student_managerment.dto.Department;
-import student_managerment.dto.Student;
 import student_managerment.ui.panel.DepartmentPanel;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
 
+@SuppressWarnings("serial")
 public class DepartmentManagermentFrame extends JFrame implements ActionListener {
 
 	private JPanel contentPane;
@@ -77,7 +77,7 @@ public class DepartmentManagermentFrame extends JFrame implements ActionListener
 		}
 	}
 	protected void btnAddActionPerformed(ActionEvent e) {
-		Department newDepartment = pCenter.getDepartment();
+		Department newDepartment = pCenter.getItem();
 		JOptionPane.showMessageDialog(null, newDepartment);
 	}
 	protected void btnCancelActionPerformed(ActionEvent e) {
