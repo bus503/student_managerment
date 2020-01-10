@@ -2,6 +2,10 @@ package student_managerment.ui;
 
 import javax.swing.JPanel;
 import javax.swing.border.TitledBorder;
+
+import student_managerment.dto.Department;
+import student_managerment.dto.Student;
+
 import java.awt.GridLayout;
 import javax.swing.UIManager;
 import java.awt.Color;
@@ -53,5 +57,24 @@ public class DepartmentPanel extends JPanel {
 		add(tfFloor);
 		tfFloor.setColumns(10);
 	}
+	
 
+	public Department getDepartment() {
+		String a= tfDeptNo.getText().trim();
+		int b= Integer.parseInt(lblDeptName.getText().trim());
+		int c= Integer.parseInt(lblFloor.getText().trim());
+		Department department = new Department(a,b,c);
+		return department;
+	}
+	private void clearTf() {
+		tfDeptNo.setText("");
+		lblDeptName.setText("");
+		lblFloor.setText("");
+	}
+	
+	private void setStudent(Student std) {
+		tfDeptNo.setText(std.getStdNo()+"");
+		lblDeptName.setText(new String(std.getStdName()+""));
+		lblFloor.setText(std.getKor()+"");
+	}
 }
