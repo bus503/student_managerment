@@ -33,6 +33,7 @@ public abstract class AbsManagementFrame<T> extends JFrame implements ActionList
 	}
 	
 	protected abstract AbsItemPanel<T> createItemPanel();
+	//이까지 오면 이놈 자식한테 구현했다는 얘기임
 
 	private void initialize() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
